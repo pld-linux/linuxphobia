@@ -2,7 +2,7 @@ Summary:	LinuxPhobia - fast schooting game
 Summary(pl):	LinuxPhobia - gra - bardzo szybka strzelanka
 Name:		linuxphobia
 Version:	1.1
-Release:	1
+Release:	2
 License:	probably free, but no source
 Group:		X11/Applications/Games
 Source0:	http://www.lynxlabs.com/games/linuxphobia/%{name}-%{version}-i386.tar.bz2
@@ -47,7 +47,7 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_applnkdir}/Games}
 mv -f {dat/,music/,pics/,sounds/} $RPM_BUILD_ROOT%{_libdir}
 mv -f {linuxphobia,phobia2.ico} $RPM_BUILD_ROOT%{_libdir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+cat %{SOURCE1} | sed "s:LIBDIR:%{_libdir}:" > $RPM_BUILD_ROOT%{_applnkdir}/Games/LinuxPhobia.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
