@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment=
 Name=LinuxPhobia
-Terminal=0
+Terminal=false
 TerminalOptions=
 Type=Application
 X-KDE-SubstituteUID=false
