@@ -24,7 +24,7 @@ Fast shooting game. Features:
 - one or two players
 - lots of weapons
 - light effects
-- Ogg-vorbis musics and dynamic stereo sounds
+- Ogg-Vorbis musics and dynamic stereo sounds
 - 3D rendered graphics
 
 %description -l pl
