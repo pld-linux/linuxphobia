@@ -1,11 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Comment=
 Name=LinuxPhobia
-Terminal=false
+Terminal=0
 TerminalOptions=
 Type=Application
 X-KDE-SubstituteUID=false
 X-KDE-Username=
-Exec=sh -c "cd /usr/X11R6/lib/linuxphobia/; ./linuxphobia"
-Icon=/usr/X11R6/lib/linuxphobia/phobia2.ico
+Exec=sh -c "cd LIBDIR; ./linuxphobia"
+Icon=LIBDIR/phobia2.ico
