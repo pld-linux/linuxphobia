@@ -3,9 +3,8 @@ Summary(pl):	LinuxPhobia - gra - bardzo szybka strzelanka
 Name:		linuxphobia
 Version:	1.1
 Release:	1
-License:	Free
-Group:		X11/Applications/Games	
-######		Unknown group!
+License:	probably free, but no source
+Group:		X11/Applications/Games
 Source0:	http://www.lynxlabs.com/games/linuxphobia/%{name}-%{version}-i386.tar.bz2
 Source1:	LinuxPhobia.desktop
 URL:		http://www.lynxlabs.com/games/linuxphobia/index.html
@@ -17,6 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
+%define		_libdir		%{_prefix}/lib/%{name}
 
 %description
 Fast shooting game. Features:
@@ -25,44 +25,43 @@ Fast shooting game. Features:
 - one or two players
 - lots of weapons
 - light effects
-- Ogworbis-musics and dynamic stereo sounds
+- Ogg-vorbis musics and dynamic stereo sounds
 - 3D rendered graphics
 
 %description -l pl
-Bardzo szybka "strzelanka".
+Bardzo szybka "strzelanka". Cechy:
 - obroty o 360 stopni,
 - 200 ufoli jednocze¶nie,
-- gra w pojedynkê lub w dwójkê,
-- du¿o borni,
+- gra w pojedynkê lub we dwójkê,
+- du¿o broni,
 - efekty ¶wietlne,
 - s³odkie odg³osy w stereo,
-- grafika 3D,
+- grafika 3D.
 
 %prep
 %setup -q
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/share/{games/%{name},applnk/Games}
+install -d $RPM_BUILD_ROOT{%{_libdir},%{_applnkdir}/Games}
 
-mv -f {dat/,music/,pics/,sounds/} $RPM_BUILD_ROOT%{_prefix}/share/games/%{name}/
-mv {linuxphobia,phobia2.ico} $RPM_BUILD_ROOT%{_prefix}/share/games/%{name}
+mv -f {dat/,music/,pics/,sounds/} $RPM_BUILD_ROOT%{_libdir}
+mv -f {linuxphobia,phobia2.ico} $RPM_BUILD_ROOT%{_libdir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_prefix}/share/applnk/Games/
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-gzip -nf9 README
+gzip -9nf README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root)%{_prefix}/share/games/%{name}/linuxphobia
-%{_prefix}/share/games/%{name}/phobia2.ico
-%{_prefix}/share/games/%{name}/dat
-%{_prefix}/share/games/%{name}/music
-%{_prefix}/share/games/%{name}/pics
-%{_prefix}/share/games/%{name}/sounds
-%{_prefix}/share/applnk/Games/
+%dir %{_libdir}
+%attr(755,root,root) %{_libdir}/linuxphobia
+%{_libdir}/phobia2.ico
+%{_libdir}/dat
+%{_libdir}/music
+%{_libdir}/pics
+%{_libdir}/sounds
+%{_applnkdir}/Games/*.desktop
