@@ -50,13 +50,12 @@ mv -f {linuxphobia,phobia2.ico} $RPM_BUILD_ROOT%{_libdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README
 %dir %{_libdir}
 %attr(755,root,root) %{_libdir}/linuxphobia
 %{_libdir}/phobia2.ico
