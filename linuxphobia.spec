@@ -1,14 +1,15 @@
 Summary:	LinuxPhobia - fast schooting game
-Summary(pl):	LinuxPhobia - gra - bardzo szybka strzelanka
+Summary(pl):	LinuxPhobia - gra, bardzo szybka strzelanka
 Name:		linuxphobia
 Version:	1.1
 Release:	2
 License:	probably free, but no source
 Group:		X11/Applications/Games
-Source0:	http://www.lynxlabs.com/games/linuxphobia/%{name}-%{version}-i386.tar.bz2
+Source0:	%{name}-%{version}-i386.tar.bz2
 # Source0-md5:	e5d3deac8f4c03a3fd3855c5a2449535
 Source1:	LinuxPhobia.desktop
-URL:		http://www.lynxlabs.com/games/linuxphobia/index.html
+# no longer valid
+#URL:		http://www.lynxlabs.com/games/linuxphobia/index.html
 Requires:	SDL
 Requires:	SDL_mixer
 Requires:	XFree86
