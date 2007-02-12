@@ -1,5 +1,5 @@
 Summary:	LinuxPhobia - fast schooting game
-Summary(pl):	LinuxPhobia - gra, bardzo szybka strzelanka
+Summary(pl.UTF-8):   LinuxPhobia - gra, bardzo szybka strzelanka
 Name:		linuxphobia
 Version:	1.1
 Release:	2
@@ -28,14 +28,14 @@ Fast shooting game. Features:
 - Ogg-Vorbis musics and dynamic stereo sounds
 - 3D rendered graphics
 
-%description -l pl
+%description -l pl.UTF-8
 Bardzo szybka "strzelanka". Cechy:
 - obroty o 360 stopni,
-- 200 ufoli jednocze¶nie,
-- gra w pojedynkê lub we dwójkê,
-- du¿o broni,
-- efekty ¶wietlne,
-- s³odkie odg³osy w stereo,
+- 200 ufoli jednoczeÅ›nie,
+- gra w pojedynkÄ™ lub we dwÃ³jkÄ™,
+- duÅ¼o broni,
+- efekty Å›wietlne,
+- sÅ‚odkie odgÅ‚osy w stereo,
 - grafika 3D.
 
 %prep
