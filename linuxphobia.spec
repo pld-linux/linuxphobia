@@ -1,5 +1,5 @@
 Summary:	LinuxPhobia - fast schooting game
-Summary(pl.UTF-8):   LinuxPhobia - gra, bardzo szybka strzelanka
+Summary(pl.UTF-8):	LinuxPhobia - gra, bardzo szybka strzelanka
 Name:		linuxphobia
 Version:	1.1
 Release:	2
