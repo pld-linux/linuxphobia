@@ -8,5 +8,4 @@ X-KDE-SubstituteUID=false
 X-KDE-Username=
 Exec=sh -c "cd LIBDIR; ./linuxphobia"
 Icon=LIBDIR/phobia2.ico
-Encoding=UTF-8
 # vi: encoding=utf-8
